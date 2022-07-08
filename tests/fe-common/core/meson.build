@@ -4,9 +4,9 @@ test_test_formats = executable('test-formats',
   ),
   link_with : [
     libconfig_a,
-    libcore_a,
-    libfe_common_core_a,
+    libcore_a 
   ],
+  link_whole : libfe_common_core_a,
   c_args : [
     '-D' + 'PACKAGE_STRING' + '="' + 'fe-common/core' + '"',
   ],
